@@ -32,22 +32,16 @@ Includes tools to construct **Energy-Energy Correlations (EECs)** and **Two-Part
    - $v_2$ can be set between **0 and 1** in the header file `1d2d_constants.h`.
 
 3. Similarly define:
-   $$
-   \text{T\_jet\_dau\_weight}
-   $$
+   `T_jet_dau_weight`
    for **trigger particles**.
 
 #### **Weighting formulas**
 - **EEC entry weight:**
-  $$
-  w_{\text{EEC}} = (p_T^{\text{dau}} \cdot p_T^{T}) \times (\text{T\_jet\_dau\_weight} \cdot \text{jet\_dau\_weight})
-  $$
+  (pT_dau * pT_T) * (T_jet_dau_weight * jet_dau_weight)
   (with $p_T$ values in the **lab frame**).
 
 - **2PC entry weight (non-energy weighted):**
-  $$
-  w_{\text{2PC}} = \text{T\_jet\_dau\_weight} \cdot \text{jet\_dau\_weight}
-  $$
+  (T_jet_dau_weight * jet_dau_weight)
 
 ---
 
@@ -75,8 +69,3 @@ Edit the constant `v2` in the header file:
 ```cpp
 1d2d_constants.h
 Acceptable range: 0 ≤ v₂ ≤ 1
-
-
-Change running source file
-
-The active source file used in compilation can be changed in 5 locations inside the Makefile.
