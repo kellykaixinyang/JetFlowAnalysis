@@ -26,9 +26,7 @@ Includes tools to construct **Energy-Energy Correlations (EECs)** and **Two-Part
 #### **Flow injection method:**
 1. For each jet, generate a random number $\psi$ between $-\pi$ and $\pi$.
 2. For each trigger & associated particle in that jet, set weight. For associated particles:
-   $$
-   \text{jet\_dau\_weight} = 1 + 2v_2\cos\big(2(\text{jet\_dau\_phi} - \psi)\big)
-   $$
+   `jet_dau_weight = 1 + 2 v2 cos(2 (jet_dau_phi - psi))`
    where:
    - `jet_dau_phi` = azimuthal angle of daughter particle relative to jet axis (in the jet frame)
    - $v_2$ can be set between **0 and 1** in the header file `1d2d_constants.h`.
