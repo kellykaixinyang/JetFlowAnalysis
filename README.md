@@ -37,8 +37,8 @@ Includes tools to construct **Energy-Energy Correlations (EECs)** and **Two-Part
 
 #### **Weighting formulas**
 - **EEC entry weight:**
-  (pT_dau * pT_T) * (T_jet_dau_weight * jet_dau_weight)
-  (with $p_T$ values in the **lab frame**).
+  (dau_pt * T_dau_pt) * (T_jet_dau_weight * jet_dau_weight)
+  (with $pt$ values in the **lab frame**).
 
 - **2PC entry weight (non-energy weighted):**
   (T_jet_dau_weight * jet_dau_weight)
