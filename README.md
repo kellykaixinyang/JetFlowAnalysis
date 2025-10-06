@@ -1,6 +1,6 @@
 # JetFlowAnalysis
-
-Analysis framework for studying **jet flow** and **correlation observables** within **CMSSW_13_3_0**.  
+# JetTreeAnalyzer
+Analysis framework for studying **jet flow** and **correlation observables** 
 Includes tools to construct **Energy-Energy Correlations (EECs)** and **Two-Particle Correlations (2PCs)** for both real collision data and Pythia simulations with manually injected elliptic flow ($v_2$).
 
 ---
@@ -11,20 +11,20 @@ Includes tools to construct **Energy-Energy Correlations (EECs)** and **Two-Part
 
 ### **1. `EECCorr.C`**
 - **Purpose:** Constructs the **1D Energy-Energy Correlation (EEC)** using the function `createEnergyDistr`.
-- **Usage:** Intended for **real collision data** — this version does **not include any $v_2$ signal**.
+- **Usage:** Intended for **real collision data** — this version does **not include any manual $v_2$ signal**.
 - **Description:**  
   Generates EEC distributions based purely on reconstructed jets and their constituents.
 
 ---
 
 ### **2. `new_default_data_vn.C`**
-- **Purpose:** Builds both **2D Two-Particle Correlations (2PC)** and **1D EEC** for **Pythia-simulated pp collisions**.
+- **Purpose:** Builds both **2D Two-Particle Correlations (2PC)** signal and background histograms and **1D EEC** for **Pythia-simulated pp collisions**.
 - **Elliptic Flow Injection:**  
   Simulates elliptic flow ($v_2$) manually to study its effect on EEC and 2PC.
 
 #### **Flow injection method:**
 1. For each jet, generate a random number $\psi$ between $-\pi$ and $\pi$.
-2. For each particle in that jet:
+2. For each trigger & associated particle in that jet, set weight. For associated particles:
    $$
    \text{jet\_dau\_weight} = 1 + 2v_2\cos\big(2(\text{jet\_dau\_phi} - \psi)\big)
    $$
