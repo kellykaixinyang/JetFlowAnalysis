@@ -1,4 +1,5 @@
 # JetFlowAnalysis
+*This repository is adapted from [liuxiaoyuyuyu/JetFlowAnalysis](https://github.com/liuxiaoyuyuyu/JetFlowAnalysis.git), which focuses on real collision data.*
 # JetTreeAnalyzer
 Analysis framework for studying **jet flow** and **correlation observables** 
 Includes tools to construct **Energy-Energy Correlations (EECs)** and **Two-Particle Correlations (2PCs)** for both real collision data and Pythia simulations with manually injected elliptic flow ($v_2$).
